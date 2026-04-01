@@ -1,0 +1,425 @@
+<!doctype html>
+<!--
+  Notail VPN — Privacy Policy (EN/RU)
+  Перед публикацией замените CONTACT_EMAIL и при необходимости SUPPORT_URL.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy Policy — Notail VPN</title>
+    <meta name="description" data-lang="en" content="Privacy Policy for Notail VPN. Learn how we protect your data and ensure privacy." />
+    <meta name="description" data-lang="ru" content="Политика конфиденциальности Notail VPN. Узнайте, как мы защищаем ваши данные и обеспечиваем приватность." />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:title" data-lang="en" content="Privacy Policy — Notail VPN" />
+    <meta property="og:title" data-lang="ru" content="Политика конфиденциальности — Notail VPN" />
+    <meta property="og:description" data-lang="en" content="How Notail VPN protects your privacy and data." />
+    <meta property="og:description" data-lang="ru" content="Как Notail VPN защищает вашу приватность и данные." />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --color-bg: #1f2019;
+        --color-text: #ffffff;
+        --color-muted: #a5a59a;
+        --color-accent: #f96848;
+        --color-accent-2: #ffa800;
+        --color-accent-3: #22ea72;
+      }
+      * { box-sizing: border-box; }
+      html, body {
+        margin: 0;
+        padding: 0;
+        background: var(--color-bg);
+        color: var(--color-text);
+        font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        line-height: 1.55;
+      }
+      .container {
+        width: min(1120px, 92%);
+        margin-inline: auto;
+      }
+      .bg-gradient {
+        position: fixed;
+        inset: -20% -30% auto -30%;
+        height: 70vh;
+        z-index: -1;
+        background:
+          radial-gradient(40% 50% at 20% 50%, rgba(249, 104, 72, 0.35), transparent 70%),
+          radial-gradient(40% 50% at 80% 30%, rgba(255, 168, 0, 0.25), transparent 70%),
+          radial-gradient(30% 40% at 50% 80%, rgba(34, 234, 114, 0.25), transparent 70%);
+        filter: blur(48px) saturate(120%);
+        pointer-events: none;
+      }
+      .site-header {
+        position: sticky;
+        top: 0;
+        backdrop-filter: blur(10px);
+        background: color-mix(in oklab, #000 30%, transparent);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        z-index: 50;
+      }
+      .header-inner {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 14px 0;
+      }
+      .brand {
+        display: inline-flex;
+        gap: 10px;
+        align-items: center;
+        font-weight: 800;
+        letter-spacing: 0.3px;
+      }
+      .brand-logo {
+        width: 18px;
+        height: 18px;
+        display: inline-grid;
+        place-items: center;
+        color: var(--color-bg);
+        background: linear-gradient(120deg, var(--color-accent), var(--color-accent-2), var(--color-accent-3));
+        border-radius: 50%;
+        box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.06);
+        font-size: 10px;
+      }
+      .lang-switcher {
+        display: inline-flex;
+        gap: 0.5rem;
+        align-items: center;
+      }
+      .lang-btn {
+        background: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        color: rgba(255, 255, 255, 0.7);
+        padding: 0.4rem 0.8rem;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.875rem;
+        transition: all 0.2s;
+      }
+      .lang-btn:hover {
+        color: white;
+        border-color: rgba(255, 255, 255, 0.4);
+      }
+      .lang-btn.active {
+        color: var(--color-accent);
+        border-color: var(--color-accent);
+        background: rgba(249, 104, 72, 0.1);
+      }
+      [data-lang] { display: none; }
+      [data-lang="en"] { display: block; }
+      html[data-current-lang="ru"] [data-lang="ru"] { display: block; }
+      html[data-current-lang="ru"] [data-lang="en"] { display: none; }
+      html[data-current-lang="en"] [data-lang="en"] { display: block; }
+      html[data-current-lang="en"] [data-lang="ru"] { display: none; }
+      .section { padding: 2rem 0 4rem; }
+      .display {
+        font-size: clamp(1.75rem, 4vw, 2.5rem);
+        font-weight: 800;
+        margin: 0 0 0.5rem;
+        line-height: 1.2;
+      }
+      .lead {
+        color: var(--color-muted);
+        margin: 0 0 1rem;
+      }
+      .feature {
+        background: rgba(48, 49, 38, 0.6);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 14px;
+        padding: 1.25rem 1.5rem;
+      }
+      .feature p { margin: 0 0 0.75rem; }
+      .feature p:last-child { margin-bottom: 0; }
+      h2 {
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin: 0 0 0.5rem;
+      }
+      main p, main li { color: #eaeae3; }
+      main ul { margin: 0.5rem 0 0; padding-left: 1.5rem; }
+      main li { margin-bottom: 0.35rem; }
+      a.link-accent {
+        color: var(--color-accent);
+        text-decoration: none;
+      }
+      a.link-accent:hover { text-decoration: underline; }
+      .site-footer {
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+        padding: 2rem 0;
+        margin-top: 2rem;
+      }
+      .footer-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+      .foot-note {
+        color: var(--color-muted);
+        font-size: 0.875rem;
+        margin: 0.75rem 0 0;
+      }
+      .foot-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        align-items: center;
+      }
+      .foot-links a {
+        color: var(--color-muted);
+        text-decoration: none;
+        font-size: 0.875rem;
+      }
+      .foot-links a:hover { color: var(--color-text); }
+    </style>
+  </head>
+  <body id="top">
+    <div class="bg-gradient" aria-hidden="true"></div>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <span class="brand-logo" aria-hidden="true">◉</span>
+          <span class="brand-name">Notail VPN</span>
+        </div>
+        <div class="lang-switcher">
+          <button type="button" class="lang-btn active" data-lang-code="en" aria-label="English">EN</button>
+          <button type="button" class="lang-btn" data-lang-code="ru" aria-label="Русский">RU</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container">
+          <h1 class="display" data-lang="en">Privacy Policy</h1>
+          <h1 class="display" data-lang="ru">Политика конфиденциальности</h1>
+          <p class="lead" data-lang="en">Last updated: April 1, 2026</p>
+          <p class="lead" data-lang="ru">Последнее обновление: 1 апреля 2026</p>
+
+          <div class="feature" style="margin-top: 16px">
+            <p data-lang="en">This privacy policy describes how Notail VPN collects, uses, and protects information you provide when using our VPN service. We are committed to protecting your privacy and ensuring maximum security of your data.</p>
+            <p data-lang="ru">Настоящая политика конфиденциальности описывает, как Notail VPN собирает, использует и защищает информацию, которую вы предоставляете при использовании нашего VPN-сервиса. Мы привержены защите вашей приватности и обеспечиваем максимальную безопасность ваших данных.</p>
+            <p data-lang="en">By using Notail VPN, you agree to the terms of this privacy policy. We may periodically update this policy, and you will be notified of significant changes.</p>
+            <p data-lang="ru">Используя Notail VPN, вы соглашаетесь с условиями данной политики конфиденциальности. Мы можем периодически обновлять эту политику, и вы будете уведомлены о существенных изменениях.</p>
+            <p data-lang="en">This policy is effective as of April 1, 2026.</p>
+            <p data-lang="ru">Данная политика действует с 1 апреля 2026 года.</p>
+          </div>
+
+          <h2 style="margin-top: 22px" data-lang="en">No-Logs Policy</h2>
+          <h2 style="margin-top: 22px" data-lang="ru">Политика отсутствия логов (No-Logs Policy)</h2>
+          <p data-lang="en">Notail VPN adheres to a strict no-logs policy. This means we <strong>do not collect or store</strong> the following information:</p>
+          <p data-lang="ru">Notail VPN придерживается строгой политики отсутствия логов. Это означает, что мы <strong>не собираем и не храним</strong> следующую информацию:</p>
+          <ul>
+            <li data-lang="en"><strong>Your internet traffic</strong> — content of your data, websites visited, files downloaded</li>
+            <li data-lang="ru"><strong>Ваш интернет-трафик</strong> — содержимое ваших данных, посещенные сайты, загруженные файлы</li>
+            <li data-lang="en"><strong>Connection history</strong> — when and to which servers you connected</li>
+            <li data-lang="ru"><strong>История подключений</strong> — когда и к каким серверам вы подключались</li>
+            <li data-lang="en"><strong>IP addresses</strong> — your real IP address is not stored on our servers</li>
+            <li data-lang="ru"><strong>IP-адреса</strong> — ваш реальный IP-адрес не сохраняется на наших серверах</li>
+            <li data-lang="en"><strong>DNS queries</strong> — which domains you visited</li>
+            <li data-lang="ru"><strong>DNS-запросы</strong> — какие домены вы посещали</li>
+            <li data-lang="en"><strong>Session metadata</strong> — connection duration, amount of data transferred</li>
+            <li data-lang="ru"><strong>Метаданные сессий</strong> — продолжительность подключений, объем переданных данных</li>
+          </ul>
+          <p style="margin-top: 1rem" data-lang="en">We cannot provide information about your internet activity because we do not store it.</p>
+          <p style="margin-top: 1rem" data-lang="ru">Мы не можем предоставить информацию о вашей активности в интернете, потому что мы её не храним.</p>
+
+          <h2 style="margin-top: 22px" data-lang="en">What Data We Collect</h2>
+          <h2 style="margin-top: 22px" data-lang="ru">Какие данные мы собираем</h2>
+          <p data-lang="en">To provide VPN service, we collect the minimum necessary information:</p>
+          <p data-lang="ru">Для предоставления VPN-сервиса мы собираем минимально необходимую информацию:</p>
+          <ul>
+            <li data-lang="en"><strong>Account information:</strong> email address, name (if provided) — for creating and managing your account</li>
+            <li data-lang="ru"><strong>Информация об аккаунте:</strong> адрес электронной почты, имя (если указано) — для создания и управления вашим аккаунтом</li>
+            <li data-lang="en"><strong>Device information:</strong> device type, operating system, app version — for technical support and service improvement</li>
+            <li data-lang="ru"><strong>Информация об устройстве:</strong> тип устройства, операционная система, версия приложения — для технической поддержки и улучшения сервиса</li>
+            <li data-lang="en"><strong>Payment information:</strong> processed through secure payment systems, we do not store your credit card data</li>
+            <li data-lang="ru"><strong>Платежная информация:</strong> обрабатывается через защищенные платежные системы, мы не храним данные ваших банковских карт</li>
+            <li data-lang="en"><strong>Technical logs:</strong> only connection errors and technical metrics (without linking to your IP or activity) — for troubleshooting</li>
+            <li data-lang="ru"><strong>Технические логи:</strong> только ошибки подключения и технические метрики (без привязки к вашему IP или активности) — для диагностики проблем</li>
+          </ul>
+
+          <h2 style="margin-top: 22px" data-lang="en">How We Use Collected Information</h2>
+          <h2 style="margin-top: 22px" data-lang="ru">Как мы используем собранную информацию</h2>
+          <p data-lang="en">We use collected information solely for the following purposes:</p>
+          <p data-lang="ru">Мы используем собранную информацию исключительно для следующих целей:</p>
+          <ul>
+            <li data-lang="en">Providing and improving VPN service</li>
+            <li data-lang="ru">Предоставление и улучшение VPN-сервиса</li>
+            <li data-lang="en">Technical support and troubleshooting</li>
+            <li data-lang="ru">Техническая поддержка и решение проблем</li>
+            <li data-lang="en">Processing payments and managing subscriptions</li>
+            <li data-lang="ru">Обработка платежей и управление подписками</li>
+            <li data-lang="en">Sending important service notifications (policy changes, technical updates)</li>
+            <li data-lang="ru">Отправка важных уведомлений о сервисе (изменения в политике, технические обновления)</li>
+            <li data-lang="en">Marketing communications (only with your consent, you can opt out at any time)</li>
+            <li data-lang="ru">Маркетинговые рассылки (только с вашего согласия, вы можете отказаться в любой момент)</li>
+          </ul>
+
+          <h2 style="margin-top: 22px" data-lang="en">Data Security</h2>
+          <h2 style="margin-top: 22px" data-lang="ru">Безопасность данных</h2>
+          <p data-lang="en">We employ modern data protection methods:</p>
+          <p data-lang="ru">Мы применяем современные методы защиты данных:</p>
+          <ul>
+            <li data-lang="en"><strong>Encryption:</strong> all traffic is encrypted using modern protocols (OpenVPN, WireGuard, etc.)</li>
+            <li data-lang="ru"><strong>Шифрование:</strong> весь трафик шифруется с использованием современных протоколов (OpenVPN, WireGuard и др.)</li>
+            <li data-lang="en"><strong>Server protection:</strong> physical and digital protection of our servers</li>
+            <li data-lang="ru"><strong>Защита серверов:</strong> физическая и цифровая защита наших серверов</li>
+            <li data-lang="en"><strong>Payment security:</strong> use of secure payment gateways, we do not store card data</li>
+            <li data-lang="ru"><strong>Безопасность платежей:</strong> использование защищенных платежных шлюзов, мы не храним данные карт</li>
+            <li data-lang="en"><strong>Regular audits:</strong> security system checks</li>
+            <li data-lang="ru"><strong>Регулярные аудиты:</strong> проверка систем безопасности</li>
+          </ul>
+          <p style="margin-top: 1rem" data-lang="en">Despite all security measures, no method of data transmission over the internet is 100% secure. We strive to protect your data but cannot guarantee absolute security.</p>
+          <p style="margin-top: 1rem" data-lang="ru">Несмотря на все меры безопасности, ни один метод передачи данных через интернет не является на 100% безопасным. Мы стремимся защищать ваши данные, но не можем гарантировать абсолютную безопасность.</p>
+
+          <h2 style="margin-top: 22px" data-lang="en">Sharing Data with Third Parties</h2>
+          <h2 style="margin-top: 22px" data-lang="ru">Передача данных третьим лицам</h2>
+          <p data-lang="en">We <strong>do not sell, rent, or share</strong> your personal data with third parties, except in the following cases:</p>
+          <p data-lang="ru">Мы <strong>не продаем, не сдаем в аренду и не передаем</strong> ваши персональные данные третьим лицам, за исключением следующих случаев:</p>
+          <ul>
+            <li data-lang="en">Service providers (hosting, payment systems) — only to provide the service, they are required to maintain confidentiality</li>
+            <li data-lang="ru">Провайдеры услуг (хостинг, платежные системы) — только для предоставления сервиса, они обязаны соблюдать конфиденциальность</li>
+            <li data-lang="en">Legal requirements — if required by law or court order</li>
+            <li data-lang="ru">Требования законодательства — если это требуется по закону или по решению суда</li>
+            <li data-lang="en">Protection of rights — to protect our rights, user safety, or prevent fraud</li>
+            <li data-lang="ru">Защита прав — для защиты наших прав, безопасности пользователей или предотвращения мошенничества</li>
+          </ul>
+
+          <h2 style="margin-top: 22px" data-lang="en">Your Rights</h2>
+          <h2 style="margin-top: 22px" data-lang="ru">Ваши права</h2>
+          <p data-lang="en">You have the right to:</p>
+          <p data-lang="ru">Вы имеете право:</p>
+          <ul>
+            <li data-lang="en">Access your personal data</li>
+            <li data-lang="ru">Получить доступ к вашим персональным данным</li>
+            <li data-lang="en">Correct inaccurate information</li>
+            <li data-lang="ru">Исправить неточную информацию</li>
+            <li data-lang="en">Delete your account and associated data</li>
+            <li data-lang="ru">Удалить ваш аккаунт и связанные данные</li>
+            <li data-lang="en">Opt out of marketing communications</li>
+            <li data-lang="ru">Отказаться от маркетинговых рассылок</li>
+            <li data-lang="en">Export your data</li>
+            <li data-lang="ru">Экспортировать ваши данные</li>
+          </ul>
+          <p style="margin-top: 1rem" data-lang="en">To exercise these rights, contact us at <a class="link-accent" href="mailto:privacy@notailvpn.com">privacy@notailvpn.com</a></p>
+          <p style="margin-top: 1rem" data-lang="ru">Для осуществления этих прав свяжитесь с нами по адресу <a class="link-accent" href="mailto:privacy@notailvpn.com">privacy@notailvpn.com</a></p>
+
+          <h2 style="margin-top: 22px" data-lang="en">Use of Cookies</h2>
+          <h2 style="margin-top: 22px" data-lang="ru">Использование файлов cookie</h2>
+          <p data-lang="en">Our website uses cookies to improve user experience. We use cookies for:</p>
+          <p data-lang="ru">Наш веб-сайт использует файлы cookie для улучшения пользовательского опыта. Мы используем cookie для:</p>
+          <ul>
+            <li data-lang="en">Website usage analysis (anonymous statistics)</li>
+            <li data-lang="ru">Анализа использования сайта (анонимная статистика)</li>
+            <li data-lang="en">Remembering your preferences</li>
+            <li data-lang="ru">Запоминания ваших предпочтений</li>
+            <li data-lang="en">Ensuring website functionality</li>
+            <li data-lang="ru">Обеспечения функциональности сайта</li>
+          </ul>
+          <p style="margin-top: 1rem" data-lang="en">You can configure your browser to refuse cookies, but this may limit website functionality. Cookies do not give us access to your device or personal information other than what you voluntarily provide.</p>
+          <p style="margin-top: 1rem" data-lang="ru">Вы можете настроить браузер для отказа от cookie, но это может ограничить функциональность сайта. Cookie не дают нам доступа к вашему устройству или личной информации, кроме той, которую вы добровольно предоставляете.</p>
+
+          <h2 style="margin-top: 22px" data-lang="en">Links to Other Websites</h2>
+          <h2 style="margin-top: 22px" data-lang="ru">Ссылки на другие сайты</h2>
+          <p data-lang="en">Our service may contain links to third-party websites. We are not responsible for the privacy policies or content of these sites. We recommend reviewing the privacy policy of each website you visit.</p>
+          <p data-lang="ru">Наш сервис может содержать ссылки на сторонние веб-сайты. Мы не несем ответственности за политику конфиденциальности или содержание этих сайтов. Рекомендуем ознакомиться с политикой конфиденциальности каждого посещаемого сайта.</p>
+
+          <h2 style="margin-top: 22px" data-lang="en">Children and Minors</h2>
+          <h2 style="margin-top: 22px" data-lang="ru">Дети и несовершеннолетние</h2>
+          <p data-lang="en">Notail VPN is not intended for persons under 18 years of age. We do not knowingly collect information from minors. If you learn that a minor has provided us with personal data, please contact us to delete this information.</p>
+          <p data-lang="ru">Notail VPN не предназначен для лиц младше 18 лет. Мы сознательно не собираем информацию от несовершеннолетних. Если вы узнали, что несовершеннолетний предоставил нам персональные данные, пожалуйста, свяжитесь с нами для удаления этой информации.</p>
+
+          <h2 style="margin-top: 22px" data-lang="en">Disclaimer of User Activity Liability</h2>
+          <h2 style="margin-top: 22px" data-lang="ru">Отказ от ответственности за деятельность пользователей</h2>
+          <p data-lang="en"><strong>Notail VPN bears no responsibility for user activity on the internet when using our service.</strong></p>
+          <p data-lang="ru"><strong>Notail VPN не несет никакой ответственности за деятельность пользователей в интернете при использовании нашего сервиса.</strong></p>
+          <p data-lang="en">By using Notail VPN, you agree that:</p>
+          <p data-lang="ru">Используя Notail VPN, вы соглашаетесь с тем, что:</p>
+          <ul>
+            <li data-lang="en">You are fully responsible for all actions you take on the internet when using the VPN service</li>
+            <li data-lang="ru">Вы несете полную ответственность за все действия, совершаемые вами в интернете при использовании VPN-сервиса</li>
+            <li data-lang="en">You agree to comply with all applicable laws and regulations of your jurisdiction</li>
+            <li data-lang="ru">Вы обязуетесь соблюдать все применимые законы и нормативные акты вашей юрисдикции</li>
+            <li data-lang="en">You will not use the service for illegal activities, including but not limited to: copyright infringement, malware distribution, cyberattacks, fraud, distribution of illegal content</li>
+            <li data-lang="ru">Вы не будете использовать сервис для незаконной деятельности, включая, но не ограничиваясь: нарушением авторских прав, распространением вредоносного ПО, кибератаками, мошенничеством, распространением незаконного контента</li>
+            <li data-lang="en">Notail VPN provides a technical service and does not control, monitor, or bear responsibility for content you access through the VPN</li>
+            <li data-lang="ru">Notail VPN предоставляет технический сервис и не контролирует, не мониторит и не несет ответственности за контент, к которому вы получаете доступ через VPN</li>
+            <li data-lang="en">We are not responsible for any losses, damages, or legal consequences arising from your use of the VPN service</li>
+            <li data-lang="ru">Мы не несем ответственности за любые убытки, ущерб или правовые последствия, возникшие в результате использования вами VPN-сервиса</li>
+            <li data-lang="en">We reserve the right to terminate service to any user violating terms of use or legislation</li>
+            <li data-lang="ru">Мы оставляем за собой право прекратить предоставление сервиса любому пользователю, нарушающему условия использования или законодательство</li>
+          </ul>
+          <p style="margin-top: 1rem" data-lang="en">Using the VPN service does not exempt you from responsibility for your actions on the internet. You bear full legal responsibility for all actions taken when using Notail VPN.</p>
+          <p style="margin-top: 1rem" data-lang="ru">Использование VPN-сервиса не освобождает вас от ответственности за ваши действия в интернете. Вы несете полную юридическую ответственность за все действия, совершаемые при использовании Notail VPN.</p>
+
+          <h2 style="margin-top: 22px" data-lang="en">Changes to Privacy Policy</h2>
+          <h2 style="margin-top: 22px" data-lang="ru">Изменения в политике конфиденциальности</h2>
+          <p data-lang="en">We may periodically update this privacy policy. We will notify you of significant changes via email or through an app notification. The date of the last update is indicated at the beginning of the document.</p>
+          <p data-lang="ru">Мы можем периодически обновлять данную политику конфиденциальности. О существенных изменениях мы уведомим вас по электронной почте или через уведомление в приложении. Дата последнего обновления указана в начале документа.</p>
+
+          <h2 style="margin-top: 22px" data-lang="en">Contact</h2>
+          <h2 style="margin-top: 22px" data-lang="ru">Контакты</h2>
+          <p data-lang="en">If you have questions regarding this privacy policy or the processing of your data, contact us:</p>
+          <p data-lang="ru">Если у вас есть вопросы относительно данной политики конфиденциальности или обработки ваших данных, свяжитесь с нами:</p>
+          <p style="margin-top: 0.5rem">
+            <span data-lang="en"><strong>Email:</strong> <a class="link-accent" href="mailto:privacy@notailvpn.com">privacy@notailvpn.com</a></span>
+            <span data-lang="ru"><strong>Email:</strong> <a class="link-accent" href="mailto:privacy@notailvpn.com">privacy@notailvpn.com</a></span>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="foot-brand">
+          <div class="brand">
+            <span class="brand-logo" aria-hidden="true">◉</span>
+            <span class="brand-name">Notail VPN</span>
+          </div>
+          <p class="foot-note">© <span id="year"></span> Notail VPN. <span data-lang="en">All rights reserved.</span><span data-lang="ru">Все права защищены.</span></p>
+        </div>
+        <div class="foot-links">
+          <a href="#top" data-lang="en">Privacy</a>
+          <a href="#top" data-lang="ru">Конфиденциальность</a>
+          <a class="link-accent" href="mailto:privacy@notailvpn.com">privacy@notailvpn.com</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+      (function () {
+        const savedLang = localStorage.getItem("notailvpn-lang") || "en";
+        const html = document.documentElement;
+        const langButtons = document.querySelectorAll(".lang-btn");
+
+        function setLanguage(lang) {
+          html.setAttribute("data-current-lang", lang);
+          html.setAttribute("lang", lang);
+          localStorage.setItem("notailvpn-lang", lang);
+          const titles = {
+            en: "Privacy Policy — Notail VPN",
+            ru: "Политика конфиденциальности — Notail VPN",
+          };
+          document.title = titles[lang] || titles.en;
+          langButtons.forEach((btn) => {
+            btn.classList.toggle("active", btn.getAttribute("data-lang-code") === lang);
+          });
+        }
+
+        setLanguage(savedLang);
+        langButtons.forEach((btn) => {
+          btn.addEventListener("click", () => setLanguage(btn.getAttribute("data-lang-code")));
+        });
+      })();
+    </script>
+  </body>
+</html>
